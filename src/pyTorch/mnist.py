@@ -40,8 +40,8 @@ class SimpleNet(nn.Module):
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(f"使用驱动: {device}")
-print(f"使用设备: {torch.cuda.get_device_name(0)}")
-print(f"使用版本: {torch.version.cuda}")
+print(f"使用设备: {torch.cpu.get_capabilities().get('cpu_name') if device.type == 'cpu' else torch.cuda.get_device_name(0)}")
+print(f"使用版本: {torch.version.cuda if device.type == 'cuda' else torch.__version__}")
 
 model = SimpleNet().to(device)
 criterion = nn.CrossEntropyLoss()
