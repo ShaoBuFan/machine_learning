@@ -1,7 +1,7 @@
 import os
 import struct
 
-data_root = "data"
+data_root = "src/numberOCR/data"
 
 # 加载图片并转换为灰度值的二维列表
 def load_bmp(path):

@@ -11,7 +11,7 @@ dataset = []
 processFiles.load_data(dataset)
 
 # 加载测试图片 准备灰度数组
-test_x = processFiles.process_bmp("test/2_0.bmp")
+test_x = processFiles.process_bmp("src/numberOCR/test/2_0.bmp")
 
 # 初始化网络参数
 W1, b1, W2, b2 = utils.init_model()
